@@ -1,0 +1,27 @@
+.header {
+    display: grid;
+    grid-column: 0fr 0fr;
+    justify-content: flex-start;
+    gap: 12px;
+    &-title {
+        grid-column: 1/3;
+        font-family: 'Playfair Display', serif;
+        font-size: var(--fs-header-h1);
+        font-weight: 700;
+    }
+    &-icon {
+        grid-column: 1/2;
+        color: #C4C4C4;
+    }
+    &-desc {
+        font-family: 'Montserrat', sans-serif;
+        font-weight: 500;
+        font-size: var(--fs-header-p);
+        max-width: var(--div-size-header);
+        grid-column: 2/3;
+        line-height: 14px;
+        margin-bottom: 3rem;
+        font-style: italic;
+        color: #4F4F4F;
+    }
+}

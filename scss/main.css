@@ -1,0 +1,383 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;700&family=Playfair+Display:ital,wght@0,700;1,400&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  font-family: inherit;
+  font-size: inherit;
+  line-height: inherit;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  font-size: 1.6rem;
+  min-height: 100vh;
+  line-height: 1.4;
+}
+
+a,
+a:visited {
+  color: inherit;
+}
+
+img {
+  width: 100%;
+}
+
+button {
+  border: none;
+}
+
+:root {
+  --pd-main:3.4rem 1.1rem;
+  --fs-header-h1:2.4rem;
+  --fs-header-p:1.2rem;
+  --fs-header-ing:1.8rem;
+  --fs-recipe:1.4rem;
+  --div-size-ins:294px;
+  --div-size-header:320px;
+}
+
+@media (min-width: 50em) {
+  :root {
+    --pd-main:5.2rem 1.1rem;
+    --fs-header-h1:4.8rem;
+    --fs-header-p:1.4rem;
+    --fs-header-ing:2.4rem;
+    --fs-recipe:1.6rem;
+    --div-size-ins:528px;
+    --div-size-header:592px;
+  }
+}
+
+main {
+  padding: var(--pd-main);
+  position: relative;
+}
+
+input[type=checkbox] {
+  cursor: pointer;
+  -webkit-box-shadow: none;
+          box-shadow: none;
+}
+
+footer {
+  font-family: Montserrat;
+  font-size: 1.4rem;
+  font-weight: 500;
+  position: absolute;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  bottom: -129px;
+  left: 0;
+  right: 0;
+  padding-bottom: 2.4rem;
+  color: #828282;
+}
+
+.header {
+  display: -ms-grid;
+  display: grid;
+  grid-column: 0fr 0fr;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  gap: 12px;
+}
+
+.header-title {
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 2;
+  grid-column: 1/3;
+  font-family: 'Playfair Display', serif;
+  font-size: var(--fs-header-h1);
+  font-weight: 700;
+}
+
+.header-icon {
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 1;
+  grid-column: 1/2;
+  color: #C4C4C4;
+}
+
+.header-desc {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 500;
+  font-size: var(--fs-header-p);
+  max-width: var(--div-size-header);
+  -ms-grid-column: 2;
+  -ms-grid-column-span: 1;
+  grid-column: 2/3;
+  line-height: 14px;
+  margin-bottom: 3rem;
+  font-style: italic;
+  color: #4F4F4F;
+}
+
+.hero-img {
+  max-width: 969px;
+  border-radius: 12px;
+}
+
+.ingredients * {
+  color: #333333;
+}
+
+.ingredients-cooktime {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (1fr)[2];
+      grid-template-columns: repeat(2, 1fr);
+  -ms-grid-rows: 1fr 1fr;
+      grid-template-rows: 1fr 1fr;
+  gap: 15px 0;
+}
+
+.ingredients-cooktime .main-ing {
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 5;
+  grid-column: 1/6;
+  justify-self: flex-start;
+}
+
+.ingredients-main i {
+  color: #F2994A !important;
+}
+
+.ingredients-main p:nth-child(3) {
+  color: #F2994A !important;
+}
+
+.ingredients .icon-box {
+  font-family: Montserrat;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 0fr 1fr;
+      grid-template-columns: 0fr 1fr;
+  width: 100px;
+  margin-top: 2rem;
+  gap: 0px 5.5px;
+}
+
+.ingredients .icon-box i {
+  -ms-grid-row: 1;
+  -ms-grid-row-span: 2;
+  grid-row: 1/3;
+  color: #333333;
+}
+
+.ingredients .icon-box p {
+  color: #BDBDBD;
+}
+
+.ingredients .icon-box p:nth-child(2) {
+  text-transform: uppercase;
+  font-weight: 700;
+  font-size: 0.8rem;
+}
+
+.ingredients .icon-box p:nth-child(3) {
+  font-family: Montserrat;
+  font-size: 1rem;
+  color: #333333;
+}
+
+.ingredients-list {
+  margin-top: 2.8rem;
+}
+
+.ingredients-title {
+  font-family: 'Playfair Display', serif;
+  font-size: var(--fs-header-ing);
+  font-weight: 700;
+  margin-bottom: 1.3rem;
+  line-height: 24px;
+}
+
+.recipe {
+  margin-bottom: 4rem;
+}
+
+.recipe-title {
+  font-family: 'Playfair Display', serif;
+  font-weight: 400;
+  font-style: italic;
+  margin-bottom: 2.4rem;
+}
+
+.recipe-list {
+  display: -ms-grid;
+  display: grid;
+  gap: 10px;
+}
+
+.recipe-list-box {
+  font-family: Montserrat;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  font-size: var(--fs-recipe);
+}
+
+.recipe-list-box input {
+  min-width: 21px;
+  height: 21px;
+  margin-right: 1rem;
+}
+
+.recipe-list-box p {
+  max-width: 554px;
+}
+
+@media (min-width: 50em) {
+  .ingredients {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: reverse;
+        -ms-flex-direction: row-reverse;
+            flex-direction: row-reverse;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+  }
+  .ingredients-cooktime {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    margin-top: 4.8rem;
+    -webkit-box-shadow: rgba(0, 0, 0, 0.05) 1px 1px 3px 4px;
+            box-shadow: rgba(0, 0, 0, 0.05) 1px 1px 3px 4px;
+    border-radius: 8px;
+    padding: 5.5rem 4.2rem;
+    height: 367px;
+    gap: 0;
+  }
+  .ingredients-cooktime .main-ing {
+    grid-column: unset;
+  }
+  .ingredients .icon-box {
+    display: -ms-grid;
+    display: grid;
+    margin-top: 0;
+  }
+  .ingredients .icon-box i {
+    font-size: 3rem;
+  }
+  .ingredients .icon-box p:nth-child(2) {
+    text-transform: uppercase;
+    font-weight: 700;
+    font-size: 1rem;
+  }
+  .ingredients .icon-box p:nth-child(3) {
+    font-family: Montserrat;
+    font-size: 1.2rem;
+    color: #333333;
+  }
+}
+
+.instructions {
+  font-family: 'Playfair Display', serif;
+}
+
+.instructions * {
+  color: #333333;
+}
+
+.instructions-title {
+  font-size: 2.4rem;
+  color: #333333;
+  margin-bottom: 2.8rem;
+}
+
+.instructions-box {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin-bottom: 2.7rem;
+}
+
+.instructions-btn {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  min-width: 36px;
+  max-width: 36px;
+  height: 36px;
+  border-radius: 6px;
+  font-size: 2.4rem;
+  color: #fff;
+  background: #F2994A;
+  padding-bottom: 0.8rem;
+  margin-right: 1.5rem;
+}
+
+.instructions-desc {
+  font-family: Montserrat;
+  max-width: var(--div-size-ins);
+  font-size: 1.6rem;
+}
+
+.source {
+  font-family: Montserrat;
+  font-style: italic;
+  font-weight: 400;
+  color: #BDBDBD;
+  font-size: 1.2rem;
+}
+
+.source span {
+  display: block;
+}
+
+@media (min-width: 50em) {
+  .source {
+    font-size: 1.6rem;
+  }
+  .source span {
+    display: inline;
+  }
+}
+/*# sourceMappingURL=main.css.map */

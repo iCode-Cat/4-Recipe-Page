@@ -1,0 +1,31 @@
+:root {
+
+    --pd-main:3.4rem 1.1rem;
+
+    --fs-header-h1:2.4rem;
+    --fs-header-p:1.2rem;
+
+    --fs-header-ing:1.8rem;
+
+    --fs-recipe:1.4rem;
+
+    --div-size-ins:294px;
+    --div-size-header:320px;
+
+    @media (min-width:50em) {
+
+        --pd-main:5.2rem 1.1rem;
+        
+        --fs-header-h1:4.8rem;
+        --fs-header-p:1.4rem;
+
+        --fs-header-ing:2.4rem;
+
+        --fs-recipe:1.6rem;
+
+        --div-size-ins:528px;
+        --div-size-header:592px;
+
+    }
+
+}
